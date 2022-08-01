@@ -25,7 +25,9 @@ CREATE TABLE `product` (
                             `updated_at` datetime COMMENT '상품 수정시간',
                             `deleted_at` datetime COMMENT '상품 삭제시간',
                             PRIMARY KEY (`id`),
-                            UNIQUE KEY `name_unique_key` (`name`)
+                            UNIQUE KEY `name_unique_key` (`name`),
+                            KEY `category_id_index` (`category_id`),
+                            KEY `brand_id_index` (`brand_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='상품';
 
 CREATE TABLE `category` (
