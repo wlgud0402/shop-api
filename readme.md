@@ -15,4 +15,37 @@
     2. 기본 @Transactional의 경우 write용 DB로 요청
 
 
+## API 목록
+```
+1. 필수 API
+    - 모든 카테고리 상품 최저가
+        - GET /api/search//min/allBrand/allCategory
+        
+    - 한 브랜드 모든 카테고리 상품 최저가
+        - GET /api/search/min/oneBrand/allCategory
+        
+    - 각 카테고리 이름으로 최소, 최대 가격 조회
+        - GET /api/search/minMaxBrandByCategoryName?categoryName=상의
+        
+2. 상품 API
+    - 상품 추가
+        - POST /api/product
+        
+    - 상품 수정
+        - PUT /api/product/{id}
+        
+    - 상품 삭제
+        - DELETE /api/product/{id}
+        
+3. 브랜드 API
+    - 브랜드 추가
+        - POST /api/brand
+        
+    - 브랜드 수정
+        - PUT /api/brand/{id}
+        
+    - 브랜드 삭제
+        - DELETE /api/brand/{id}
+```
+
 <img width="884" alt="image" src="https://user-images.githubusercontent.com/61821825/182177001-1c0dfdd1-391f-4981-b8ca-968d9634ac84.png">
