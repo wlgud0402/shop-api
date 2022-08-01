@@ -48,4 +48,5 @@
         - DELETE /api/brand/{id}
 ```
 
+## DB 설계
 <img width="884" alt="image" src="https://user-images.githubusercontent.com/61821825/182177001-1c0dfdd1-391f-4981-b8ca-968d9634ac84.png">
