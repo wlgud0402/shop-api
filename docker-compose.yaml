@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  shop-mysql:
+    image: mysql:8
+    command: --init-file /data/application/main.sql --character-set-server=utf8 --collation-server=utf8_general_ci
+    restart: always
+    ports:
+      - "3300:3306"
+    expose:
+      - "3300"
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD="yes"
+    volumes:
+      - ./src/test/resources/schema/shop_base_ddl.sql:/data/application/main.sql

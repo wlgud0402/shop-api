@@ -1,0 +1,26 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    main:
+      username: root
+      password:
+      master:
+        name: shop-master
+        url: jdbc:mysql://127.0.0.1:3300/shop?serverTimezone=UTC&characterEncoding=UTF-8&rewriteBatchedStatements=true
+      slaves:
+        - name: shop-slave-0
+          url: jdbc:mysql://127.0.0.1:3300/shop?serverTimezone=UTC&characterEncoding=UTF-8&rewriteBatchedStatements=true
+        - name: shop-slave-1
+          url: jdbc:mysql://127.0.0.1:3300/shop?serverTimezone=UTC&characterEncoding=UTF-8&rewriteBatchedStatements=true
+        - name: shop-slave-2
+          url: jdbc:mysql://127.0.0.1:3300/shop?serverTimezone=UTC&characterEncoding=UTF-8&rewriteBatchedStatements=true
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 20
